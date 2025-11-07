@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,6 +144,9 @@
        🗑️ Delete Data
     </a>
   </div>
+<div class="text-center mt-6">
+  <a href="logout.php" class="text-red-600 hover:underline font-semibold">Logout</a>
+</div>
 
   <!-- Footer -->
   <footer class="bg-blue-700 text-white text-center py-4 mt-10">
