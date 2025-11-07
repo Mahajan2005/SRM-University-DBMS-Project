@@ -21,8 +21,13 @@
       transform: translateY(-5px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
+    a:hover {
+      transform: scale(1.03);
+      transition: all 0.2s ease-in-out;
+    }
   </style>
 </head>
+
 <body class="min-h-screen flex flex-col">
   <!-- Header -->
   <header class="bg-blue-700 text-white py-5 shadow-md">
@@ -59,46 +64,81 @@
 
     <!-- Data Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Students -->
       <div class="card p-6 text-center">
         <h3 class="text-2xl font-bold text-blue-700 mb-2">Students</h3>
         <p class="text-gray-600 mb-4">View all registered students with their personal details, enrolled courses, and performance.</p>
-        <a href="students.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full inline-block">View Students</a>
+        <a href="students.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full inline-block mb-2">View Students</a>
+        <a href="add_student.php" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full inline-block">+ Add Student</a>
       </div>
 
+      <!-- Courses -->
       <div class="card p-6 text-center">
         <h3 class="text-2xl font-bold text-blue-700 mb-2">Courses</h3>
         <p class="text-gray-600 mb-4">Explore courses under each department and check credit details and descriptions.</p>
-        <a href="courses.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full inline-block">View Courses</a>
+        <div class="space-x-3">
+          <a href="courses.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full inline-block">View Courses</a>
+          <a href="add_course.php" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full inline-block">+ Add Course</a>
+        </div>
       </div>
 
+      <!-- Instructors -->
       <div class="card p-6 text-center">
         <h3 class="text-2xl font-bold text-blue-700 mb-2">Instructors</h3>
         <p class="text-gray-600 mb-4">Browse instructors by department and view their qualifications and teaching experience.</p>
-        <a href="instructors.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full inline-block">View Instructors</a>
+        <div class="space-x-3">
+          <a href="instructors.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full inline-block">View Instructors</a>
+          <a href="add_instructor.php" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full inline-block">+ Add Instructor</a>
+        </div>
       </div>
 
+      <!-- Departments -->
       <div class="card p-6 text-center">
         <h3 class="text-2xl font-bold text-blue-700 mb-2">Departments</h3>
         <p class="text-gray-600 mb-4">Get details of departments, building locations, and contact numbers.</p>
         <a href="departments.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full inline-block">View Departments</a>
       </div>
 
+      <!-- Semesters -->
       <div class="card p-6 text-center">
         <h3 class="text-2xl font-bold text-blue-700 mb-2">Semesters</h3>
         <p class="text-gray-600 mb-4">Check academic timelines, start and end dates for each semester.</p>
         <a href="semesters.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full inline-block">View Semesters</a>
       </div>
 
+      <!-- Registrations -->
       <div class="card p-6 text-center">
         <h3 class="text-2xl font-bold text-blue-700 mb-2">Registrations</h3>
         <p class="text-gray-600 mb-4">Analyze which students registered for which courses and track their grades.</p>
         <a href="registrations.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full inline-block">View Registrations</a>
       </div>
+
+      <!-- DCL & TCL Demo -->
+      <div class="card p-6 text-center">
+        <h3 class="text-2xl font-bold text-blue-700 mb-2">Database Control Demo</h3>
+        <p class="text-gray-600 mb-4">
+          Understand how DCL & TCL ensure database security and transaction integrity.
+        </p>
+        <a href="dcl_tcl_demo.php" 
+           class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full inline-block">
+           View Demo
+        </a>
+      </div>
     </div>
   </main>
 
+  <!-- Delete Data Section -->
+  <div class="text-center mt-12">
+    <a href="delete_data.php" 
+       class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-md transition">
+       🗑️ Delete Data
+    </a>
+  </div>
+
+  <!-- Footer -->
   <footer class="bg-blue-700 text-white text-center py-4 mt-10">
-    <p>© 2025 SRM University Database Project | Designed by Ananya Mahajan</p>
+    <p>© 2025 SRM University Database Project | Designed by Ananya Mahajan & Sayed Ishan</p>
   </footer>
 
   <script>

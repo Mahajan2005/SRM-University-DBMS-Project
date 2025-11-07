@@ -76,7 +76,7 @@ th {
 </main>
 
 <footer class="bg-blue-700 text-white text-center py-4 mt-10">
-  <p>© 2025 SRM University Database Project | Designed by Ananya Mahajan</p>
+  <p>© 2025 SRM University Database Project | Designed by Ananya Mahajan & Sayed Ishan </p>
 </footer>
 
 </body>
